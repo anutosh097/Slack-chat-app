@@ -37,7 +37,7 @@ const Register = () => {
       errors = handleErrors(errors.concat(error))
       return false
    } else if(!isPasswordValid(password,passwordConfirmation)){
-      error = {message: "Password is invalid"}
+      error = {message: "Password is invalid or passwords don't match"}
       errors = handleErrors(errors.concat(error))
       return false
    }else{
