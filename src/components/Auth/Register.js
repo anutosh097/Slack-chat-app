@@ -9,14 +9,51 @@ const Register = () => {
  const [email, handleEmail] = useState("")
  const [password, handlePassword] = useState("")
  const [passwordConfirmation, handlePasswordConfirmation] = useState("")
+ const [errors, handleErrors] = useState([])
+
+
+
+ const isFormEmpty = ({username,email,password,passwordConfirmation}) => {
+   return !username.length || !email.length || !password.length || !passwordConfirmation.length
+ }
+
+ const isPasswordValid = (password,passwordConfirmation) => {
+     if(password.length < 6 || passwordConfirmation < 6){ //min length of password should be 6 characters
+       return false
+     }else if(password !== passwordConfirmation){
+       return false
+     }else{
+      return true
+     }
+ }
+
+ const displayErrors = errors => errors.map((error,i) => <p key={i}>{error.message}</p>)
+
+ const isFormValid = () => {
+  let errors = []
+  let error
+   if(isFormEmpty({username,email,password,passwordConfirmation})){
+      error = {message: "Fill in all fields"}
+      errors = handleErrors(errors.concat(error))
+      return false
+   } else if(!isPasswordValid(password,passwordConfirmation)){
+      error = {message: "Password is invalid"}
+      errors = handleErrors(errors.concat(error))
+      return false
+   }else{
+    return true
+   }
+ }
 
  const handleSubmit = event => {
+  if(isFormValid()){
     event.preventDefault()
     firebase
      .auth()
      .createUserWithEmailAndPassword(email, password)
      .then(userCredential => console.log(userCredential))
      .catch(err => console.log(err))
+  }   
  }
 
   return (
@@ -36,6 +73,12 @@ const Register = () => {
                <Button color="orange" fluid size="large">Submit</Button>
             </Segment>
           </Form>
+           {errors.length > 0 && (
+            <Message error>
+              <h3>Error</h3>
+              {displayErrors(errors)}
+            </Message>
+           )}
           <Message>Already a user? <Link to="/login">Login</Link></Message>
        </Grid.Column>
     </Grid>
