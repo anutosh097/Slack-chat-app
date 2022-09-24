@@ -29,3 +29,8 @@
 
 
 ![Screenshot (271)](https://user-images.githubusercontent.com/81863474/192078706-7ad83b0e-7b76-4ea7-9efc-208a00deaf82.png) 
+
+***Inputs related to errors highlighted***
+
+
+![Screenshot (272)](https://user-images.githubusercontent.com/81863474/192079590-cb1360e2-4f3f-495d-ac89-c8439ca8051b.png)
