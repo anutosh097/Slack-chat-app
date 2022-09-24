@@ -35,3 +35,9 @@
 
 ![Screenshot (272)](https://user-images.githubusercontent.com/81863474/192079590-cb1360e2-4f3f-495d-ac89-c8439ca8051b.png)
 ![Screenshot (273)](https://user-images.githubusercontent.com/81863474/192079793-4dcaca6d-d304-4b19-89f1-842d08e5b85f.png)
+
+***Added gravatar and username to returned user object from firebase on successful registration***
+
+
+![Screenshot (275)](https://user-images.githubusercontent.com/81863474/192081684-9ee3c5dc-feb8-4f8a-8686-5761dc85ecdf.png)
+![Screenshot (276)](https://user-images.githubusercontent.com/81863474/192081685-8b610d9a-172e-44e7-958b-d13b0b913866.png)
