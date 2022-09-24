@@ -42,3 +42,10 @@
 ![Screenshot (275)](https://user-images.githubusercontent.com/81863474/192081684-9ee3c5dc-feb8-4f8a-8686-5761dc85ecdf.png)
 ![Screenshot (276)](https://user-images.githubusercontent.com/81863474/192081685-8b610d9a-172e-44e7-958b-d13b0b913866.png)
 ![Screenshot (278)](https://user-images.githubusercontent.com/81863474/192081755-f7184595-c9cf-499b-94fe-9ffde16de20a.png)
+
+***Adding registered/authenticated users to firebase realtime database***
+
+![2022-09-24_17h35_56](https://user-images.githubusercontent.com/81863474/192097156-abc00304-79e0-46fe-843f-a5162c331b55.png)
+![2022-09-24_17h37_30](https://user-images.githubusercontent.com/81863474/192097157-00c71b60-d48c-420d-a13f-3eed57835019.png)
+
+
