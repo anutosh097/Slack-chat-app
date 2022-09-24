@@ -67,6 +67,10 @@ const Register = () => {
   }   
  }
 
+ const handleInput = (allerrors, inputName) => {
+      return allerrors.some(error => error.message.toLowerCase().includes(inputName)) ? "error" : ""
+ }
+
   return (
     <React.StrictMode>
     <Grid textAlign = "center" verticalAlign="middle" className="app">
@@ -78,9 +82,9 @@ const Register = () => {
           <Form size="large" onSubmit={handleSubmit}>
             <Segment stacked>
                <Form.Input fluid name="username" icon="user" iconPosition="left" value={username} placeholder="Username" onChange={e => handleUser(e.target.value)} type="text"/>
-               <Form.Input fluid name="email" icon="mail" iconPosition="left" value={email} placeholder="Email Address" onChange={e => handleEmail(e.target.value)} type="email"/>
-               <Form.Input fluid name="password" icon="lock" iconPosition="left" value={password} placeholder="Password" onChange={e => handlePassword(e.target.value)} type="password"/>
-               <Form.Input fluid name="passwordConfirmation" icon="repeat" iconPosition="left" value={passwordConfirmation} placeholder="Password Confirmation" onChange={e => handlePasswordConfirmation(e.target.value)} type="password"/>
+               <Form.Input className={handleInput(errors,"email")} fluid name="email" icon="mail" iconPosition="left" value={email} placeholder="Email Address" onChange={e => handleEmail(e.target.value)} type="email"/>
+               <Form.Input className={handleInput(errors,"password")} fluid name="password" icon="lock" iconPosition="left" value={password} placeholder="Password" onChange={e => handlePassword(e.target.value)} type="password"/>
+               <Form.Input className={handleInput(errors,"password")} fluid name="passwordConfirmation" icon="repeat" iconPosition="left" value={passwordConfirmation} placeholder="Password Confirmation" onChange={e => handlePasswordConfirmation(e.target.value)} type="password"/>
                <Button disabled={loading} className={loading ? "loading" : ""} color="orange" fluid size="large">Submit</Button>
             </Segment>
           </Form>
