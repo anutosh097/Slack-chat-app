@@ -10,6 +10,8 @@ const Register = () => {
  const [password, handlePassword] = useState("")
  const [passwordConfirmation, handlePasswordConfirmation] = useState("")
  const [errors, handleErrors] = useState([])
+ const [loading, handleLoading] = useState(false)
+
 
 
 
@@ -46,13 +48,22 @@ const Register = () => {
  }
 
  const handleSubmit = event => {
+  event.preventDefault()
   if(isFormValid()){
-    event.preventDefault()
+    handleErrors([])
+    handleLoading(true)
     firebase
      .auth()
      .createUserWithEmailAndPassword(email, password)
-     .then(userCredential => console.log(userCredential))
-     .catch(err => console.log(err))
+     .then(userCredential => {
+      console.log(userCredential)
+      handleLoading(false)
+    })
+     .catch(err => {
+      console.log(err)
+      handleLoading(false)
+      handleErrors(errors.concat(err))
+    })
   }   
  }
 
@@ -70,7 +81,7 @@ const Register = () => {
                <Form.Input fluid name="email" icon="mail" iconPosition="left" value={email} placeholder="Email Address" onChange={e => handleEmail(e.target.value)} type="email"/>
                <Form.Input fluid name="password" icon="lock" iconPosition="left" value={password} placeholder="Password" onChange={e => handlePassword(e.target.value)} type="password"/>
                <Form.Input fluid name="passwordConfirmation" icon="repeat" iconPosition="left" value={passwordConfirmation} placeholder="Password Confirmation" onChange={e => handlePasswordConfirmation(e.target.value)} type="password"/>
-               <Button color="orange" fluid size="large">Submit</Button>
+               <Button disabled={loading} className={loading ? "loading" : ""} color="orange" fluid size="large">Submit</Button>
             </Segment>
           </Form>
            {errors.length > 0 && (
