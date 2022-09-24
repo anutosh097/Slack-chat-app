@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Grid,Form,Segment,Button,Header,Message,Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
+import md5 from 'md5';
 import firebase from "../../firebase";
 
 const Register = () => {
@@ -11,6 +12,7 @@ const Register = () => {
  const [passwordConfirmation, handlePasswordConfirmation] = useState("")
  const [errors, handleErrors] = useState([])
  const [loading, handleLoading] = useState(false)
+ const [usersRef,handleUsersRef] = useState(firebase.database().ref("users"))
 
 
 
@@ -57,7 +59,15 @@ const Register = () => {
      .createUserWithEmailAndPassword(email, password)
      .then(userCredential => {
       console.log(userCredential)
-      handleLoading(false)
+      userCredential.user.updateProfile({
+        displayName: username,
+        photoURL: `http://gravatar.com/avatar/${md5(email)}?d=identicon`
+      }).then(() => {
+        saveUser(userCredential).then(() => console.log("user saved successfully in database"))
+      }).catch((err) => {
+        handleLoading(false)
+        handleErrors(errors.concat(err))
+      })
     })
      .catch(err => {
       console.log(err)
@@ -65,6 +75,13 @@ const Register = () => {
       handleErrors(errors.concat(err))
     })
   }   
+ }
+
+ const saveUser = createdUser => {
+    return handleUsersRef(usersRef.child(createdUser.user.uid).set({
+      name: createdUser.user.displayName,
+      avatar: createdUser.user.photoURL
+    }))
  }
 
  const handleInput = (allerrors, inputName) => {
