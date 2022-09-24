@@ -24,3 +24,8 @@
 ![Screenshot (266)](https://user-images.githubusercontent.com/81863474/192078476-4e478ae7-fab5-4b8c-ad27-b07265e99bd9.png)
 ![Screenshot (267)](https://user-images.githubusercontent.com/81863474/192078477-79d28568-e9fe-4f71-95fa-131dd06553e2.png)
 ![Screenshot (269)](https://user-images.githubusercontent.com/81863474/192078570-4e6bb19c-6f89-4fec-af47-3d940a23ee4c.png)
+
+***Spinner loading on clicking on submitting buttton and button disabled for successive registration***
+
+
+![Screenshot (271)](https://user-images.githubusercontent.com/81863474/192078706-7ad83b0e-7b76-4ea7-9efc-208a00deaf82.png)
