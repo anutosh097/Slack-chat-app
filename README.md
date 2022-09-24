@@ -47,3 +47,12 @@
 
 ![2022-09-24_17h37_30](https://user-images.githubusercontent.com/81863474/192097157-00c71b60-d48c-420d-a13f-3eed57835019.png)
 ![2022-09-24_17h35_56](https://user-images.githubusercontent.com/81863474/192098103-13d993be-f3b8-48de-8cbb-3ce62b15c1f0.png)
+
+
+***Adding registered/authenticated user of username "helloweekend" and email "helloweekend@gmail.com" to firebase realtime database after authenticating***
+
+
+![2022-09-24_18h11_41](https://user-images.githubusercontent.com/81863474/192098706-84dfbed3-0fe0-427d-912b-d0dbe369f579.png)
+![2022-09-24_18h13_06](https://user-images.githubusercontent.com/81863474/192098708-9b83f73e-4473-48b1-9437-8c8b586d6e2a.png)
+![2022-09-24_18h12_44](https://user-images.githubusercontent.com/81863474/192098718-1f8b07d1-52b0-4458-9a4d-d1ae8f02fbc5.png)
+
