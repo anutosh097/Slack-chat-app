@@ -17,3 +17,10 @@
 ![Screenshot (263)](https://user-images.githubusercontent.com/81863474/190886020-70d1e00a-6d24-40de-a44e-42bf12defeac.png)
 ![Screenshot (264)](https://user-images.githubusercontent.com/81863474/190886022-d892feb6-e084-4ec7-be47-014708169bd3.png)
 ![Screenshot (265)](https://user-images.githubusercontent.com/81863474/190886023-a171c6d5-b9b9-4883-aa3f-d77988fff413.png)
+
+***Handling error in case user already exists***
+
+
+![Screenshot (266)](https://user-images.githubusercontent.com/81863474/192078476-4e478ae7-fab5-4b8c-ad27-b07265e99bd9.png)
+![Screenshot (267)](https://user-images.githubusercontent.com/81863474/192078477-79d28568-e9fe-4f71-95fa-131dd06553e2.png)
+![Screenshot (269)](https://user-images.githubusercontent.com/81863474/192078570-4e6bb19c-6f89-4fec-af47-3d940a23ee4c.png)
