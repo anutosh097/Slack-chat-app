@@ -45,7 +45,6 @@
 
 ***Adding registered/authenticated users to firebase realtime database***
 
-![2022-09-24_17h35_56](https://user-images.githubusercontent.com/81863474/192097156-abc00304-79e0-46fe-843f-a5162c331b55.png)
 ![2022-09-24_17h37_30](https://user-images.githubusercontent.com/81863474/192097157-00c71b60-d48c-420d-a13f-3eed57835019.png)
 
 
