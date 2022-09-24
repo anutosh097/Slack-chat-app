@@ -28,4 +28,4 @@
 ***Spinner loading on clicking on submitting buttton and button disabled for successive registration***
 
 
-![Screenshot (271)](https://user-images.githubusercontent.com/81863474/192078706-7ad83b0e-7b76-4ea7-9efc-208a00deaf82.png)
+![Screenshot (271)](https://user-images.githubusercontent.com/81863474/192078706-7ad83b0e-7b76-4ea7-9efc-208a00deaf82.png) 
