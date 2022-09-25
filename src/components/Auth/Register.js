@@ -49,6 +49,13 @@ const Register = () => {
    }
  }
 
+ const saveUser = createdUser => {
+  return handleUsersRef(usersRef.child(createdUser.user.uid).set({
+    name: createdUser.user.displayName,
+    avatar: createdUser.user.photoURL
+  }))
+}
+
  const handleSubmit = event => {
   event.preventDefault()
   if(isFormValid()){
@@ -63,8 +70,10 @@ const Register = () => {
         displayName: username,
         photoURL: `http://gravatar.com/avatar/${md5(email)}?d=identicon`
       }).then(() => {
-        saveUser(userCredential).then(() => console.log("user saved successfully in database"))
+        // console.log(res)
+        saveUser(userCredential).then(() => console.log("user saved in database")).catch((err) => console.log(err))
       }).catch((err) => {
+        console.log(err)
         handleLoading(false)
         handleErrors(errors.concat(err))
       })
@@ -77,12 +86,7 @@ const Register = () => {
   }   
  }
 
- const saveUser = createdUser => {
-    return handleUsersRef(usersRef.child(createdUser.user.uid).set({
-      name: createdUser.user.displayName,
-      avatar: createdUser.user.photoURL
-    }))
- }
+
 
  const handleInput = (allerrors, inputName) => {
       return allerrors.some(error => error.message.toLowerCase().includes(inputName)) ? "error" : ""
@@ -92,7 +96,7 @@ const Register = () => {
     <React.StrictMode>
     <Grid textAlign = "center" verticalAlign="middle" className="app">
        <Grid.Column style={{maxWidth: 450}}>
-          <Header as="h2" icon color="orange" textAlign="center">
+          <Header as="h1" icon color="orange" textAlign="center">
              <Icon name="puzzle piece" color="orange" />
                Register for DevChat             
           </Header>
