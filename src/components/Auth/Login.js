@@ -48,7 +48,7 @@ const Login = () => {
             <Segment stacked>
                <Form.Input className={handleInput(errors,"email")} fluid name="email" icon="mail" iconPosition="left" value={email} placeholder="Email Address" onChange={e => handleEmail(e.target.value)} type="email"/>
                <Form.Input className={handleInput(errors,"password")} fluid name="password" icon="lock" iconPosition="left" value={password} placeholder="Password" onChange={e => handlePassword(e.target.value)} type="password"/>
-               <Button disabled={loading} className={loading ? "loading" : ""} color="violet" fluid size="large">Submit</Button>
+               <Button disabled={loading} className={loading ? "loading" : ""} color="violet" fluid size="large">Login</Button>
             </Segment>
           </Form>
            {errors.length > 0 && (
